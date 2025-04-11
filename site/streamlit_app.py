@@ -1,6 +1,13 @@
 import streamlit as st
 
-st.title("🎈 My new app")
+st.title("🎈 Previsão de Ações 🪙💹")
 st.write(
-    "Let's start building! For help and inspiration, head over to [docs.streamlit.io](https://docs.streamlit.io/)."
+    "Ferramenta para calcular o valor de ações"
 )
+
+# Lista de opções
+opcoes = ["aapl"]
+
+# Criando o combobox
+escolha = st.selectbox("Empresa:", opcoes)
+
