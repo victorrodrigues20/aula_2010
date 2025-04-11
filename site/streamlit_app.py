@@ -28,7 +28,7 @@ payload = {
 
 if st.button("Fazer previsão"):
     # Fazendo a requisição GET
-    response = requests.get(url, params=payload)
+    response = requests.get(url, json=payload)
 
     # Verificando se a requisição foi bem-sucedida
     if response.status_code == 200:
