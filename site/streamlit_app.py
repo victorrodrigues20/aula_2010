@@ -33,7 +33,7 @@ if st.button("Fazer previsão"):
     # Verificando se a requisição foi bem-sucedida
     if response.status_code == 200:
         dados = response.json()
-        st.sucess(f"Profecia: {dados['profecia']}")
+        st.success(f"Profecia: {dados['profecia']}")
     else:
         st.write(f"Erro na requisição: {response.status_code}")
         st.write(response.text)
