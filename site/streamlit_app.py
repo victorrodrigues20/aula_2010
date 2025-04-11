@@ -26,13 +26,14 @@ payload = {
     "prev_fecham" : prev_fecham
 }
 
-# Fazendo a requisição GET
-response = requests.get(url, body=payload)
+if st.button("Fazer previsão"):
+    # Fazendo a requisição GET
+    response = requests.get(url, body=payload)
 
-# Verificando se a requisição foi bem-sucedida
-if response.status_code == 200:
-    dados = response.json()
-    st.write(f"Previsão: {dados}")
-else:
-    st.write(f"Erro na requisição: {response.status_code}")
-    st.write(response.text)
+    # Verificando se a requisição foi bem-sucedida
+    if response.status_code == 200:
+        dados = response.json()
+        st.write(f"Previsão: {dados}")
+    else:
+        st.write(f"Erro na requisição: {response.status_code}")
+        st.write(response.text)
